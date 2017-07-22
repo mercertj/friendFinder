@@ -7,24 +7,32 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var connection = connection;
 var PORT = process.env.PORT || 3000;
-app.listen(port, function() {
-console.log("Connected!");
+
+app.get('/', function (req, res) {
+  res.send('Friend Finder');
+})
+
+// parse application
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use(bodyParser.json())
+
+app.use(function (req, res) {
+  res.setHeader('Content-Type', 'text/plain')
+  res.write('you posted:\n')
+  res.end(JSON.stringify(req, body, null, 2))
+})
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
 });
-
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+// var exphbs = require("express-handlebars");
 
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 // connection.connect(function(err) {
 //     if (err) {
@@ -225,3 +233,5 @@ var friendList =
     "express": "^4.15.3"
   }
 }
+
+module.exports = friendList;
