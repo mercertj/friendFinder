@@ -48,7 +48,7 @@ app.get("/all", function(req, res) {
 });
 
 var friendList = 
-{
+[{
   "name": "Joe Smith",
   "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
   "scores": [
@@ -65,7 +65,7 @@ var friendList =
   ],
   "dependencies": {
     "express": "^4.15.3"
-  }
+  },
 
 {
   "name": "Roger White",
@@ -85,7 +85,7 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
 
 {
   "name": "Jack Miller",
@@ -105,7 +105,7 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
 
 {
   "name": "Ferris Bueller",
@@ -125,7 +125,7 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
 
 {
   "name": "Jackie Treehorn",
@@ -145,7 +145,7 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
 
 {
   "name": "Jeff Lebowski",
@@ -165,7 +165,7 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
 
 {
   "name": "Pat Davis",
@@ -185,7 +185,7 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
 
 {
   "name": "Linda Coltrane",
@@ -205,7 +205,8 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+},
+
 {
   "name": "Sandy Nelson",
   "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
@@ -224,6 +225,6 @@ var friendList =
   "dependencies": {
     "express": "^4.15.3"
   }
-}
+}];
 
 module.exports = friendList;
