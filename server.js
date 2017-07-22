@@ -18,12 +18,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 
-app.use(function (req, res) {
-  res.setHeader('Content-Type', 'text/plain')
-  res.write('you posted:\n')
-  res.end(JSON.stringify(req, body, null, 2))
-})
-
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
@@ -43,11 +37,11 @@ app.listen(PORT, function() {
 // });
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "view.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/add", function(req, res) {
-  res.sendFile(path.join(__dirname, "add.html"));
+  res.sendFile(path.join(__dirname, "view.html"));
 });
 
 // Get all characters
