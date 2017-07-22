@@ -4,7 +4,7 @@ app.get("/api/friends", function(req, res) {
 
 app.post("/api/survey", function(req, res) {
   var newUser = req.body;
-  newcharacter.routeName = newUser.name.replace(/\s+/g, "").toLowerCase();
+  newUserrouteName = newUser.name.replace(/\s+/g, "").toLowerCase();
 
   console.log(newUser);
 
