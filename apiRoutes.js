@@ -1,4 +1,4 @@
-
+var tableData = require ('../data/table-data.js')
 
 
 app.get("/api/friends", function(req, res) {
